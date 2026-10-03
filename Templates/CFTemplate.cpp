@@ -8,6 +8,7 @@ using str = string;
 
 // Vectors
 #define sort(x) sort(begin(x), end(x))
+#define erase(x, i) x.erase(x.begin() + i)
 
 // Algorithms
 bool isPrime(int n) {
