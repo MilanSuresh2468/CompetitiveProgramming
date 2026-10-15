@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+// Type Aliases 
+using ll = long long;
+using db = long double;
+using str = string;
+
+// Vectors
+#define sort(x) sort(begin(x), end(x))
+#define erase(x, i) x.erase(x.begin() + i)
+#define pb push_back
+
+// Algorithms
+bool isPrime(int n) {
+    for (int i = 2; i < sqrt(n); i++) {
+        if (n%i == 0) return false;
+    }
+    return true;
+}
+
+int intPow(int x, int y) {
+    int result = 1;
+    for (int i = 0; i < y; i++) result *= x;
+    return result;
+}
+
+
+int main() {
+    // Find the number of crimes which will go untreated.
+    
+    int n, curr, officerCount = 0, untreatedCrimes = 0;
+    cin >> n;
+    
+    while (n--) {
+
+        cin >> curr;
+        if (curr > 0) {
+            officerCount += curr;
+        } else if (officerCount < 1 && curr == -1) {
+            untreatedCrimes++;
+        } else {
+            officerCount--;
+        }
+    }
+    
+    cout << untreatedCrimes;
+    return 0;
+}
