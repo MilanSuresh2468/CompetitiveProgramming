@@ -36,7 +36,13 @@ int main() {
     // We can always get at least n carrots of the same size (1) by selecting x = 1.
     // Amount of carrots we get by choosing x = #carrots of length x + #carrots of length > x
     // + #carrots of length 2x.
-    // We can compute all three of these quantities separately. 
+    // We can compute all three of these quantities separately.
+    
+    // I looked at the official submission after getting an accepted submission.
+    // My formula can be simplified.
+    // Amount of carrots we get by choosing x = #carrots of length x + #carrots of length > x
+    // + #carrots of length 2x simplies to Amount of carrots we get by choosing x = #carrots of
+    // length ≥ x + #carrots of length 2x.
     
     int t, n, m, curr, count, max;
     vector <int> a, ops;
@@ -59,7 +65,7 @@ int main() {
         }
         //cout << endl;
         
-        // Add the #carrots of length x to each value of ops.
+        // Add the #carrots of length = x to each value of ops.
         for (int i = 0; i < a.size(); i++) {
             ops[a[i]]++;
         }
