@@ -12,15 +12,15 @@ using str = string;
 #define pb push_back
 
 // Algorithms
-bool isPrime(int n) {
-    for (int i = 2; i <= sqrt(n); i++) {
+bool isPrime(ll n) {
+    for (ll i = 2; i <= sqrt(n); i++) {
         if (n%i == 0) return false;
     }
     return true;
 }
 
-int intPow(int x, int y) {
-    int result = 1;
+int intPow(ll x, ll y) {
+    ll result = 1;
     for (int i = 0; i < y; i++) result *= x;
     return result;
 }
