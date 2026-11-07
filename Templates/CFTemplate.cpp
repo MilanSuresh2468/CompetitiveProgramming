@@ -28,5 +28,4 @@ int intPow(ll x, ll y) {
 
 int main() {
     
-    return 0;
 }
