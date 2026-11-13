@@ -27,5 +27,5 @@ int intPow(ll x, ll y) {
 
 
 int main() {
-    
+    cin.tie();
 }
