@@ -34,18 +34,19 @@ int main() {
     
     cin.tie(0);
     int n, curr;
-    vector <int> a;
+    vector <int> a(100);
     cin >> n;
     
+    // The program runs in O(n) instead of O(nlogn) if we sort by counting.
     for (int i = 0; i < n; i++) {
         cin >> curr;
-        a.pb(curr);
+        a[curr - 1]++;
     }
     
-    sort(a);
-    
-    for (int i = 0; i < n; i++) {
-        cout << a[i] << " ";
+    for (int i = 0; i < 100; i++) {
+        for (int j = 0; j < a[i]; j++) {
+            cout << " " << i + 1;
+        }
     }
     
 }
