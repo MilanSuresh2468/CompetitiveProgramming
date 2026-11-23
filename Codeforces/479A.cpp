@@ -36,7 +36,8 @@ int main() {
         nums.pb(curr);
     }
     
-    cout << max((nums[0] + nums[1]) * nums[2],
+    cout << max(max((nums[0] + nums[1]) * nums[2],
+                nums[0] + nums[1] + nums[2]),
                 max(nums[0] * (nums[1] + nums[2]),
                 nums[0] * nums[1] * nums[2]));
 }
